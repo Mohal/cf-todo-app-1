@@ -1,16 +1,53 @@
-# React + Vite
+# 📦 React To-Do App (Version 1)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A clean, responsive single-page To-Do application built with React, Vite, and containerized with Docker and Nginx.
 
-Currently, two official plugins are available:
+## 🚀 Features
+* **Add Task**: Quick task creation with input validation.
+* **Display Tasks**: Clear view of active and completed tasks.
+* **Toggle Complete**: Mark tasks done with visual strike-through styling.
+* **Delete Task**: Remove individual items.
+* **Local Persistence**: Saves state using browser `localStorage`.
+* **Containerized**: Production-ready static build using Docker + Nginx.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🛠️ Tech Stack
+* **Frontend**: React.js + JavaScript
+* **Build Tool**: Vite
+* **Styling**: CSS3
+* **Containerization**: Docker & Docker Compose
+* **Server**: Nginx (alpine)
 
-## React Compiler
+## 💻 Local Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:Mohal/cf-todo-app-1.git
+   cd cf-todo-app-1
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start development server:
+   ```bash
+   npm run dev
+   ```
+   
+## 🐳 Running with Docker
 
-## Expanding the Oxlint configuration
+Build and run the production container locally:
+```bash
+docker compose up --build -d
+```
+Access the app at http://localhost:3000.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+To stop the container:
+```bash
+docker compose down
+```
+
+## 🗺️ Roadmap
+* [x] V1: Basic CRUD + LocalStorage + Docker
+* [ ] V2: Task Filtering (All/Active/Completed) & Inline Editing
+* [ ] V3: Migration to TypeScript
+* [ ] V4: Node.js / Express REST API integration
