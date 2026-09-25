@@ -34,11 +34,13 @@ export default function App() {
   };
 
   return (
-    <div>
+    <div className="app-container">
       <h1>My To-Do List</h1>
       <TodoForm addTodo={addTodo} />
       <TodoList todos={todos} onToggle={toggleTodo} onDelete={deleteTodo} />
-      <p>{todos.filter((t) => !t.completed).length} tasks remaining</p>
+      {todos.length > 0 && (
+        <p>{todos.filter((t) => !t.completed).length} tasks remaining</p>
+      )}
     </div>
   );
 }

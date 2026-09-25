@@ -1,8 +1,12 @@
 import TodoItem from './TodoItem';
 
 export default function TodoList({ todos, onToggle, onDelete }) {
+  if (todos.length === 0) {
+    return <p className="empty-state">No tasks yet. Add your first task above &#9757;.</p>
+  }
+
   return (
-    <ul>
+    <ul className="todo-list">
       {todos.map((todo) => (
         <TodoItem
           key={todo.id}
